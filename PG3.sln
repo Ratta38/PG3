@@ -7,6 +7,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "00-00", "00-00\00-00.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "00-01", "00-01\00-01.vcxproj", "{8AFDC27B-763C-46C8-BD31-3124AF2E0B11}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-01", "01-01\01-01.vcxproj", "{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{2022CB0F-8BAF-F49E-0C48-8EF4C96EC109}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +38,14 @@ Global
 		{8AFDC27B-763C-46C8-BD31-3124AF2E0B11}.Release|x64.Build.0 = Release|x64
 		{8AFDC27B-763C-46C8-BD31-3124AF2E0B11}.Release|x86.ActiveCfg = Release|Win32
 		{8AFDC27B-763C-46C8-BD31-3124AF2E0B11}.Release|x86.Build.0 = Release|Win32
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Debug|x64.ActiveCfg = Debug|x64
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Debug|x64.Build.0 = Debug|x64
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Debug|x86.ActiveCfg = Debug|Win32
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Debug|x86.Build.0 = Debug|Win32
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Release|x64.ActiveCfg = Release|x64
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Release|x64.Build.0 = Release|x64
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Release|x86.ActiveCfg = Release|Win32
+		{94FD1F31-FB13-410B-81AF-DC97EAE9DCEF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
