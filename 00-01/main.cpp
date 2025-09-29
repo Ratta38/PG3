@@ -1,8 +1,7 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 	printf("こんにちは");
 
-	return 0; 
+	return 0;
 }
