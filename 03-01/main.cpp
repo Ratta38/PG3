@@ -1,8 +1,7 @@
-#include <memory>
 #include "Enemy.h"
+#include <memory>
 
-int main()
-{
+int main() {
 	std::unique_ptr<Enemy> enemy_ = std::make_unique<Enemy>();
 
 	// 接近
@@ -17,5 +16,5 @@ int main()
 	enemy_->SetPhase(Phase::WITHDRAW);
 	enemy_->StatePrint();
 
-	return 0; 
+	return 0;
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <list>
-#include <stdio.h>
 
 /// <summary>
 /// 駅のリストを出力する関数
@@ -35,9 +34,7 @@ void InsertBefore(std::list<const char*>& stations, const char* target, const ch
 
 int main() {
 	// 山手線駅名リスト
-	std::list<const char*> stations = {"Tokyo",   "Kanda",  "Akihabara", "Okachimachi", "Ueno",         "Uguisudani", "Nippori",      "Tabata",    "Komagome",
-	                                   "Sugamo",  "Otsuka", "Ikebukuro", "Mejiro",      "Takadanobaba", "Shin-Okubo", "Shinjuku",     "Yoyogi",    "Harajuku",
-	                                   "Shibuya", "Ebisu",  "Gotanda",   "Osaki",       "Shinagawa",    "Tamachi",    "Hamamatsucho", "Shimbashi", "Yurakucho"};
+	std::list<const char*> stations = { "Tokyo", "Kanda", "Akihabara", "Okachimachi", "Ueno", "Uguisudani", "Nippori", "Tabata", "Komagome", "Sugamo", "Otsuka", "Ikebukuro", "Mejiro", "Takadanobaba", "Shin-Okubo", "Shinjuku", "Yoyogi", "Harajuku", "Shibuya", "Ebisu", "Gotanda", "Osaki", "Shinagawa", "Tamachi", "Hamamatsucho", "Shimbashi", "Yurakucho" };
 
 	// 1970年
 	PrintStations("1920年", stations);

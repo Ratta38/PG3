@@ -13,7 +13,7 @@ public:
 	void Shot();       // 射撃
 	void Withdrawal(); // 離脱
 
-	void StatePrint();// 現在の状態を出力
+	void StatePrint(); // 現在の状態を出力
 
 	void SetPhase(Phase p) { phase_ = p; }
 
