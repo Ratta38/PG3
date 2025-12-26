@@ -2,38 +2,39 @@
 #include <stdio.h>
 
 const int MAX_HOURS = 10;
-const int kKourlyRate = 1226;
+const int kHourlyRate = 1226; // 一般的な時給
 
-// 再帰的な賃金計算＋途中経過表示
-int RecursiveRate(int hourlyRate, int recursiveHourlyRate, int hours) {
+// 再帰的な賃金計算＋途中経過表示（累計額同士で比較）
+int RecursiveRate(int recursiveHourlyRate, int normalTotal, int recursiveTotal, int hours) {
+
 	if (hours >= MAX_HOURS) {
-		return recursiveHourlyRate;
+		return recursiveTotal;
 	}
 
-	printf("\n=== 時給比較 (%d時間目) ===\n", hours);
-	printf("一般的な時給で儲けた額      : %d円\n", hourlyRate);
-	printf("再帰的な時給で儲けた額      : %d円\n", recursiveHourlyRate);
+	// 累計額を更新
+	normalTotal += kHourlyRate;
+	recursiveTotal += recursiveHourlyRate;
 
-	if (recursiveHourlyRate > hourlyRate) {
-	    printf("再帰的時給で儲けた額の方が高い\n");
-	} else if (recursiveHourlyRate < hourlyRate) {
-	    printf("一般的時給で儲けた額の方が高い\n");
+	printf("\n=== 賃金比較 (%d時間目) ===\n", hours);
+	printf("一般的な賃金の累計額      : %d円\n", normalTotal);
+	printf("再帰的な賃金の累計額      : %d円\n", recursiveTotal);
+
+	if (recursiveTotal > normalTotal) {
+		printf("→ 再帰的賃金体系のほうが高い\n");
+	} else if (recursiveTotal < normalTotal) {
+		printf("→ 一般的賃金体系のほうが高い\n");
 	} else {
-	    printf("同額\n");
+		printf("→ 同額\n");
 	}
 
-	return RecursiveRate(hourlyRate + kKourlyRate, recursiveHourlyRate * 2 - 50, hours + 1);
+	// 次の時間の時給を更新
+	return RecursiveRate(recursiveHourlyRate * 2 - 50, normalTotal, recursiveTotal, hours + 1);
 }
 
-int main() {
-	// 一般的な賃金体系での時給
-	int hourlyRate = 1226;
+int main() {      
+	int recursiveHourlyRate = 100; // 再帰的な初期時給
 
-	// 再帰的な賃金体系での初期時給
-	int recursiveHourlyRate = 100;
-
-	// 2つの体系での最終的な時給
-	int finalRate = RecursiveRate(hourlyRate, recursiveHourlyRate, 1);
+	RecursiveRate(recursiveHourlyRate, 0, 0, 1);
 
 	return 0;
 }
