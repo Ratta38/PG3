@@ -1,4 +1,6 @@
 #pragma once
+#include "Unit.h"
+
 class Selector{
 public:
 	int mapX_;

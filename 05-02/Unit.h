@@ -2,10 +2,10 @@
 
 class Selector;
 
-class Unit{
+class Unit {
 public:
 	Unit() = default;
-	void Init(int idef);
+	void Init(int idref);
 	void Update();
 	void Draw();
 
@@ -13,9 +13,9 @@ public:
 	void MoveEnd(Selector* selector);
 
 private:
-	int mapX_=0;
-	int mapY_=0;
-	int mapSize_=32;
-	int id=0;
-	bool isSelected_=false;
+	int mapX_ = 0;
+	int mapY_ = 0;
+	int mapSize_ = 32;
+	int id = 0;
+	bool isSelected_ = false;
 };
